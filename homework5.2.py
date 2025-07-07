@@ -28,8 +28,8 @@ new_record = ('Flash', 'Gordon', 32, 'Astronaut', 'Denver')
 people_records.insert(0, new_record)
 print(people_records)
 
-rep_5 = people_records[5]
-rep_1 = people_records[1]
+rep_5 = people_records[1]
+rep_1 = people_records[5]
 people_records[1] = rep_5
 people_records[5] = rep_1
 print(people_records)
