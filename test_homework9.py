@@ -31,7 +31,7 @@ class AverageNumber(unittest.TestCase):
         self.assertEqual(average_numbers([7, 44, 13, 37, 4, 11, 12, 14]), 17.75)
 
     def test_average_true_list2(self):
-        self.assertAlmostEqual(average_numbers([7, 44, 13, 37, 4, 11, 12, 14]), 17.75)
+        # self.assertAlmostEqual(average_numbers([7, 44, 13, 37, 4, 11, 12, 14]), 17.75)
         self.assertAlmostEqual(average_numbers([-4, 4]), 0.0)                         # almost equal
 
 class ReversedList(unittest.TestCase):
