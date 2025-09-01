@@ -1,0 +1,45 @@
+2025-09-01 12:24:13,412 - INFO - Calling add with args=(5, 3), kwargs={}
+2025-09-01 12:24:13,412 - INFO - add returned 8
+2025-09-01 12:24:13,412 - ERROR - Exception in divide: division by zero
+Traceback (most recent call last):
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 115, in divide
+    return a / b
+ZeroDivisionError: division by zero
+2025-09-01 12:30:23,773 - INFO - Calling add with args=(5, 3), kwargs={}
+2025-09-01 12:30:23,773 - INFO - add returned 8
+2025-09-01 12:30:23,773 - ERROR - Exception in divide: division by zero
+Traceback (most recent call last):
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 115, in divide
+    return a / b
+ZeroDivisionError: division by zero
+2025-09-01 12:31:47,932 - INFO - Calling add with args=(5, 3), kwargs={}
+2025-09-01 12:31:47,932 - INFO - add returned 8
+2025-09-01 12:31:47,932 - ERROR - Exception in divide: division by zero
+Traceback (most recent call last):
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 115, in divide
+    return a / b
+ZeroDivisionError: division by zero
+2025-09-01 12:38:37,603 - INFO - Calling add with args=(5, 3), kwargs={}
+2025-09-01 12:38:37,603 - INFO - add returned 8
+2025-09-01 12:38:37,603 - ERROR - Exception in divide: division by zero
+Traceback (most recent call last):
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 115, in divide
+    return a / b
+ZeroDivisionError: division by zero
+2025-09-01 12:40:53,994 - INFO - Calling add with args=(5, 3), kwargs={}
+2025-09-01 12:40:53,994 - INFO - add returned 8
+2025-09-01 12:40:53,994 - ERROR - Exception in divide: division by zero
+Traceback (most recent call last):
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yehor.bulhakov/PycharmProjects/hillel_2025/lesson_18/homework18.py", line 115, in divide
+    return a / b
+ZeroDivisionError: division by zero
