@@ -1,3 +1,12 @@
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='app.log',
+    filemode='a'
+)
+
 # GENERATORS
 
 # Even number generator from 0 to N
@@ -52,9 +61,9 @@ class EvenIterator:
 # Decorator for logging arguments and results
 def log_decorator(func):
     def wrapper(*args, **kwargs):
-        print(f"Calling {func.__name__} with args={args}, kwargs={kwargs}")
+        logging.info(f"Calling {func.__name__} with args={args}, kwargs={kwargs}")
         result = func(*args, **kwargs)
-        print(f"{func.__name__} returned {result}")
+        logging.info(f"{func.__name__} returned {result}")
         return result
     return wrapper
 
@@ -64,7 +73,8 @@ def exception_handler(func):
         try:
             return func(*args, **kwargs)
         except Exception as e:
-            print(f"An error occurred in {func.__name__}: {e}")
+            logging.error(f"Exception in {func.__name__}: {e}", exc_info=True)
+            return None
     return wrapper
 
 
@@ -97,12 +107,13 @@ if __name__ == "__main__":
         return a + b
 
     add(5, 3)
-    print()
+    print("Check 'app.log' for logged information.\n")
 
     print("Exception handling decorator test:")
     @exception_handler
     def divide(a, b):
         return a / b
 
-    divide(10, 2)  # OK
-    divide(10, 0)  # Division by zero
+    print("divide(10, 2):", divide(10, 2))  # OK
+    print("divide(10, 2):", divide(10, 0))  # Division by zero
+    print("Check 'app.log' for errors.\n")
