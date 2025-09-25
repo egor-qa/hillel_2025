@@ -1,0 +1,19 @@
+2025-09-25 15:46:47,841 - INFO - Authentication successful, token stored.
+2025-09-25 15:46:47,842 - INFO - Request /cars with sort_by=price, limit=3
+2025-09-25 15:46:47,845 - INFO - Received 3 records
+2025-09-25 15:46:47,845 - INFO - Test sort_by=price, limit=3 passed
+2025-09-25 15:46:47,846 - INFO - Request /cars with sort_by=year, limit=5
+2025-09-25 15:46:47,847 - INFO - Received 5 records
+2025-09-25 15:46:47,847 - INFO - Test sort_by=year, limit=5 passed
+2025-09-25 15:46:47,848 - INFO - Request /cars with sort_by=brand, limit=4
+2025-09-25 15:46:47,850 - INFO - Received 4 records
+2025-09-25 15:46:47,851 - INFO - Test sort_by=brand, limit=4 passed
+2025-09-25 15:46:47,852 - INFO - Request /cars with sort_by=engine_volume, limit=6
+2025-09-25 15:46:47,853 - INFO - Received 6 records
+2025-09-25 15:46:47,854 - INFO - Test sort_by=engine_volume, limit=6 passed
+2025-09-25 15:46:47,854 - INFO - Request /cars with sort_by=price, limit=10
+2025-09-25 15:46:47,857 - INFO - Received 10 records
+2025-09-25 15:46:47,857 - INFO - Test sort_by=price, limit=10 passed
+2025-09-25 15:46:47,858 - INFO - Request /cars with sort_by=year, limit=2
+2025-09-25 15:46:47,860 - INFO - Received 2 records
+2025-09-25 15:46:47,860 - INFO - Test sort_by=year, limit=2 passed
