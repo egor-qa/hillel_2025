@@ -1,0 +1,209 @@
+"""XPath and CSS locators for https://qauto2.forstudy.space/"""
+
+
+
+# XPath:
+
+# 1
+# Logo:hillelauto
+//div[contains(@class,"header_left")]/a[@class="header_logo"]
+
+# 2
+# Home Section header
+//a[contains(@class, 'header-link') and normalize-space(text())='Home']
+
+# 3
+# About Section header
+//button[@appscrollto='aboutSection']
+
+# 4
+# Contacts Section header
+//header//button[contains(@class,"header-link") and text()="Contacts"]
+
+# 5
+# Guest log in button
+//button[@class='header-link -guest']
+
+# 6
+# Sign In button
+//header//button[text()="Sign In"]
+
+# 7
+# Do more! text
+//div/h1[contains(@class,"hero-descriptor_title")]
+
+# 8
+# Sign up button
+//button[contains(@class, 'hero-descriptor_btn') and text()='Sign up']
+
+# 9
+# YouTube Play button
+//div[@id="player"]//button[@title="Відтворити"]
+
+# 10
+# Fuel expenses picture
+//img[contains(@src, 'info_1.jpg') and @alt='Instructions']
+
+# 11
+# Instructions picture
+//img[contains(@src, 'info_2.jpg') and @alt='Instructions']
+
+# 12
+# Contacts text footer
+//div[@id='contactsSection']//h2[normalize-space()='Contacts']
+
+# 13
+# Facebook link footer
+//div[@id="contactsSection"]//span[contains(@class,"icon-facebook")]
+
+# 14
+# Telegram link footer
+//div[@id="contactsSection"]//span[contains(@class,"icon-telegram")]
+
+# 15
+# YouTube link footer
+//div[@id="contactsSection"]//span[contains(@class,"icon-youtube")]
+
+# 16
+# Instagram link footer
+//div[@id="contactsSection"]//span[contains(@class,"icon-instagram")]
+
+# 17
+# Linkedin link footer
+//div[@id="contactsSection"]//span[contains(@class,"icon-linkedin")]
+
+# 18
+# ithillel.ua link footer
+//*[@id="contactsSection"]/div/div/div[2]/a[1]
+
+# 19
+# Support link footer
+//*[@id="contactsSection"]/div/div/div[2]/a[2]
+
+# 20
+# Hillel logo footer
+//a[contains(@class, 'footer_logo')]/*[name()='svg']
+
+# 21
+# Registration form after clicking the "Sign in" button in the header
+//div[@class="modal-content"]
+
+# 22
+# Email input field in Login form
+//*[@id="signinEmail"]
+
+# 23
+# Password input field in Login form
+//*[@id="signinPassword"]
+
+# 24
+# Login button in Login form
+//button[contains(@class, 'btn-primary') and text()='Login' and @disabled]
+
+# 25
+# "My profile" button on Garage page after clicking the "Guest log in" button
+//button[@id="userNavDropdown"]
+
+
+# CSS:
+
+# 1
+# Logo:hillelauto
+a.header_logo
+
+# 2
+# Home Header
+a.btn.header-link.-active
+
+# 3
+# About Section header
+appscrollto='aboutSection'
+
+# 4
+# Contacts Section header
+button.btn.header-link[appscrollto="contactsSection"]
+
+# 5
+# Guest log in button
+button.header-link.-guest
+
+# 6
+# Sign In button
+button.header_signin
+
+# 7
+# Do more! text
+h1.hero-descriptor_title
+
+# 8
+# Sign up button
+.hero-descriptor .btn-primary
+
+# 9
+# YouTube Play button
+button.ytp-large-play-button
+
+# 10
+# Fuel expenses picture
+img.about-picture_img[src*='info_1.jpg']
+
+# 11
+# Instructions picture
+img.about-picture_img[src*='info_2.jpg']
+
+# 12
+# Contacts text footer
+#contactsSection .col-md-6 > h2
+
+# 13
+# Facebook link footer
+span.socials_icon.icon.icon-facebook
+
+# 14
+# Telegram link footer
+span.socials_icon.icon.icon-telegram
+
+# 15
+# YouTube link footer
+span.socials_icon.icon.icon-youtube
+
+# 16
+# Instagram link footer
+span.socials_icon.icon.icon-instagram
+
+# 17
+# Linkedin link footer
+span.socials_icon.icon.icon-linkedin
+
+# 18
+# ithillel.ua link footer
+a.contacts_link.display-4
+
+# 19
+# Support link footer
+a.contacts_link.h4
+
+# 20
+# Hillel logo footer
+a.footer_logo
+
+# 21
+# Log in form after clicking the "Sign in" button in the header
+div.modal-content
+
+# 22
+# Email input field in Login form
+input#signinEmail
+
+# 23
+# Password input field in Login form
+#signinEmail
+input#signinPassword
+
+# 24
+# Login button in Login form
+button.btn.btn-primary[disabled]
+
+# 25
+# "My profile" button on Garage page after clicking the "Guest log in" button
+button#userNavDropdown
