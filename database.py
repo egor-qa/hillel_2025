@@ -1,5 +1,6 @@
 import psycopg2
 import os
+import allure
 
 def get_connection():
     return psycopg2.connect(
@@ -10,6 +11,7 @@ def get_connection():
         database=os.getenv("DB_NAME", "testdb")
     )
 
+@allure.step("Create table 'users' if not exists")
 def create_table():
     conn = get_connection()
     cur = conn.cursor()
@@ -24,6 +26,7 @@ def create_table():
     cur.close()
     conn.close()
 
+@allure.step("Insert user '{name}' with age {age}")
 def insert_user(name, age):
     conn = get_connection()
     cur = conn.cursor()
@@ -32,6 +35,7 @@ def insert_user(name, age):
     cur.close()
     conn.close()
 
+@allure.step("Update user with id={id} to name='{name}', age={age}")
 def update_user(id, name, age):
     conn = get_connection()
     cur = conn.cursor()
@@ -40,6 +44,7 @@ def update_user(id, name, age):
     cur.close()
     conn.close()
 
+@allure.step("Delete user with id={id}")
 def delete_user(id):
     conn = get_connection()
     cur = conn.cursor()
@@ -48,6 +53,7 @@ def delete_user(id):
     cur.close()
     conn.close()
 
+@allure.step("Get all users from database")
 def get_users():
     conn = get_connection()
     cur = conn.cursor()
