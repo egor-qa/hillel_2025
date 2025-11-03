@@ -1,0 +1,6 @@
+SMTP server: smtp.gmail.com
+Use SMTP Authentication: ☑
+User: your_email@gmail.com
+Password: (App Password)
+Use SSL: ☑
+SMTP Port: 465
