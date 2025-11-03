@@ -1,0 +1,70 @@
+pipeline {
+    agent any
+
+    environment {
+        // Virtual environment or python from the system
+        PYTHON = 'python3'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning repository...'
+                checkout scm
+            }
+        }
+
+        stage('Install dependencies') {
+            steps {
+                echo 'Installing dependencies...'
+                sh '''
+                    ${PYTHON} -m venv venv
+                    . venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage('Run tests') {
+            steps {
+                echo 'Running tests...'
+                sh '''
+                    . venv/bin/activate
+                    pytest --junitxml=reports/test-results.xml --maxfail=1 --disable-warnings -q
+                '''
+            }
+        }
+
+        stage('Publish test results') {
+            steps {
+                echo 'Publishing test results...'
+                junit 'reports/test-results.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished, sending email notification...'
+            emailext (
+                to: 'InsertYour@Mail.Here',
+                subject: "Build #${BUILD_NUMBER} - ${JOB_NAME} (${BUILD_STATUS})",
+                body: """
+                    <h2>Pipeline Result: ${BUILD_STATUS}</h2>
+                    <p>Job: ${JOB_NAME}</p>
+                    <p>Build Number: ${BUILD_NUMBER}</p>
+                    <p>View Details: <a href="${BUILD_URL}">${BUILD_URL}</a></p>
+                """,
+                attachLog: true,
+                mimeType: 'text/html'
+            )
+        }
+        success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}
